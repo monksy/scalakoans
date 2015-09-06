@@ -7,7 +7,7 @@ import support.KoanSuite
 class AboutAsserts extends KoanSuite with ShouldMatchers {
 
   koan("asserts can take a boolean argument") {
-    assert(false) // should be true
+    assert(true) // should be true
   }
 
   koan("asserts can include a message") {

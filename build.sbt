@@ -23,5 +23,6 @@ scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature")
 offline := true
 
 libraryDependencies ++= Seq(
-	"org.scalatest" %% "scalatest" % "1.9.1" % "test" withSources() withJavadoc()
+	"org.scalatest" %% "scalatest" % "1.9.1"
+		//% "test" withSources() withJavadoc()
 )
