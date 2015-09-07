@@ -40,10 +40,10 @@ class AboutObjects extends KoanSuite {
       def magyar = "Szia"
     }
 
-    Greeting.english should be(__)
-    Greeting.espanol should be(__)
-    Greeting.deutsch should be(__)
-    Greeting.magyar should be(__)
+    Greeting.english should be("Hi")
+    Greeting.espanol should be("Hola")
+    Greeting.deutsch should be("Hallo")
+    Greeting.magyar should be("Szia")
   }
 
   koan( """Here is proof an object is a singleton, and not a static method in a class""") {
@@ -60,11 +60,11 @@ class AboutObjects extends KoanSuite {
     val x = Greeting
     val y = x
 
-    x eq y should be(__) //Reminder, eq checks for reference
+    x eq y should be(true) //Reminder, eq checks for reference
 
     val z = Greeting
 
-    x eq z should be(__)
+    x eq z should be(true)
   }
 
 
@@ -86,7 +86,7 @@ class AboutObjects extends KoanSuite {
       }
     }
 
-    Movie.academyAwardBestMoviesForYear(1932).get.name should be(__)
+    Movie.academyAwardBestMoviesForYear(1932).get.name should be("Grand Hotel")
   }
 
 
@@ -107,7 +107,7 @@ class AboutObjects extends KoanSuite {
     _99.shoot(150)
     max.shoot(200)
 
-    SecretAgent.bullets should be(__)
+    SecretAgent.bullets should be(1500)
   }
 
 
@@ -118,9 +118,9 @@ class AboutObjects extends KoanSuite {
     val bruce = new Person("Bruce Wayne", "Batman")
     val diana = new Person("Diana Prince", "Wonder Woman")
 
-    Person.showMeInnerSecret(clark) should be (__)
-    Person.showMeInnerSecret(peter) should be (__)
-    Person.showMeInnerSecret(bruce) should be (__)
-    Person.showMeInnerSecret(diana) should be (__)
+    Person.showMeInnerSecret(clark) should be ("Superman")
+    Person.showMeInnerSecret(peter) should be ("Spiderman")
+    Person.showMeInnerSecret(bruce) should be ("Batman")
+    Person.showMeInnerSecret(diana) should be ("Wonder Woman")
   }
 }
